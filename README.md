@@ -2,6 +2,8 @@
 
 This note system has been designed to just improve the overall hosting experience of HRs by making it easier to take notes.
 
+Thank you to Koleb for advice on creating it and Kap for breaking it.
+
 ## Features
 - Automatic leaderboard
 - Notes system
