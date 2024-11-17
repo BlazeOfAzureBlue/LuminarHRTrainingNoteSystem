@@ -169,7 +169,7 @@
             this.button1.ForeColor = System.Drawing.Color.Silver;
             this.button1.Location = new System.Drawing.Point(12, 359);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 23);
+            this.button1.Size = new System.Drawing.Size(172, 23);
             this.button1.TabIndex = 7;
             this.button1.Text = "Remove Selected Player";
             this.button1.UseVisualStyleBackColor = false;

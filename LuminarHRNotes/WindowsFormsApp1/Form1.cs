@@ -80,12 +80,18 @@ namespace WindowsFormsApp1
                 listBox3.Items.RemoveAt(itemSelected);
                 listBox4.Items.RemoveAt(itemSelected);
                 listBox5.Items.RemoveAt(itemSelected);
+                playerNames.RemoveAt(itemSelected);
                 playerKills.RemoveAt(itemSelected);
                 CplayerDeaths.RemoveAt(itemSelected);
                 playerDeaths.RemoveAt(itemSelected);
                 playerMadeRetreat.RemoveAt(itemSelected);
                 CplayerMadeRetreat.RemoveAt(itemSelected);
                 Warnings.RemoveAt(itemSelected);
+                PlayerName.Text = "N/A";
+                KillsLabelCount.Text = "0";
+                DeathsLabelCount.Text = "0";
+                RetreatsLabelCount.Text = "0";
+                MadeRetreatLabel.Text = "0";
                 listBox1.Update();
             }
         }
