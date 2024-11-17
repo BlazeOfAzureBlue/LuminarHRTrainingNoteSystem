@@ -35,5 +35,61 @@ This will clear all data of them from the application.
 Click on the player in the list which you wish to change the values of.
 
 Then, click the + / - icon next to the number value below the name of the value you wish to change. For example, in the below screenshot, I have set "Kitsune" to 3 kills:
+![image](https://github.com/user-attachments/assets/813b91f9-7db3-49cf-a02a-8bf33f6922f3)
+
+## Understanding the leaderboard
+
+The leaderboard will automatically change to reflect their current ranking in the training **overall.**
+
+Those with the most kills and made retreats will rank first, followed by retreats then deaths then warnings. An example of this can be seen here:
+
+![image](https://github.com/user-attachments/assets/3335edf9-6bc6-43a6-8b87-b8a1105ebc6d)
+
+For what value means, it is as follows:
+**K** - Kills
+**D** - Deaths
+**R** - Retreats
+**M** - Made Retreats (Forced another player to retreat.)
+
+**These values do not all need to be used if the training type does not require them.**
+
+## Resetting current round values
+
+When a round is over, you can press the "Reset Current Round" when the round is over.
+
+![image](https://github.com/user-attachments/assets/87778233-e24d-4221-9425-c0ecc06e0eb7)
+
+Doing this will change the current K/D/R/M to 0 on each value whilst retaining the overall total for rankings. It will also reset the values you assign when + / -'ing values.
+
+![image](https://github.com/user-attachments/assets/a1f66f04-2340-40ca-8b16-ba0e8a68c438)
+
+## Warnings
+
+When someone has misbehaved during training, you can warn them by selecting their name in the list. Type in whatever warning message you wish to in the large box and click "Enter Warning for Selected". 
+
+![image](https://github.com/user-attachments/assets/c5f46874-67af-406b-9ea9-8b1313bf0cf1)
+
+This will add a warning next to their name and put a log of it in the large box at the bottom.
+
+![image](https://github.com/user-attachments/assets/47932023-5ae3-43eb-a029-2f9a894213f4)
+
+## Removing warnings
+If you incorrectly warned someone, you can remove their warning by selecting their name in the list and clicking "Remove Warning from Selected". This will remove their warning and add a log that you removed it.
+
+![image](https://github.com/user-attachments/assets/25b304f4-7c57-4976-8ee6-5e25228c8081)
+
+## Notes
+
+You can add a note to yourself by following the same process as above but you do not need to select a name (if you have a name selected, it does not matter.) You then click "Add Personal Note".
+
+![image](https://github.com/user-attachments/assets/61ffbcb8-7892-492e-9aa8-2edb93c42f1d)
+
+Doing so will add a note in the logs system.
+
+![image](https://github.com/user-attachments/assets/714c9c5d-6bd4-4dfc-a5bd-2df8a030173f)
+
+
+
+
 
 
