@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WindowsFormsApp1
 {
@@ -38,6 +39,11 @@ namespace WindowsFormsApp1
         {
             if (textBox1.Text.Length > 0)
             {
+                if (textBox1.Text.Length > 2)
+                {
+                    textBox1.Text = textBox1.Text.Substring(0, 20);
+                }
+
                 listBox1.Items.Add(textBox1.Text);
                 playerNames.Add(textBox1.Text);
                 playerKills.Add(0);
@@ -274,7 +280,7 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1)
+            if (listBox1.SelectedIndex != -1 && Warnings[listBox1.SelectedIndex] != 3)
             {
                 string currentWarnings = listBox5.Items[listBox1.SelectedIndex].ToString() + " X";
                 listBox5.Items.RemoveAt(listBox1.SelectedIndex);
