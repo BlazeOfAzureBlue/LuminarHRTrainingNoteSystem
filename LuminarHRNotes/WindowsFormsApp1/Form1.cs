@@ -39,13 +39,14 @@ namespace WindowsFormsApp1
         {
             if (textBox1.Text.Length > 0)
             {
-                if (textBox1.Text.Length > 2)
+                string text = textBox1.Text;
+                if (textBox1.Text.Length > 20)
                 {
-                    textBox1.Text = textBox1.Text.Substring(0, 20);
+                    text = textBox1.Text.Substring(0, 20);
                 }
 
-                listBox1.Items.Add(textBox1.Text);
-                playerNames.Add(textBox1.Text);
+                listBox1.Items.Add(text);
+                playerNames.Add(text);
                 playerKills.Add(0);
                 playerDeaths.Add(0);
                 playerRetreats.Add(0);
@@ -56,7 +57,7 @@ namespace WindowsFormsApp1
                 CplayerMadeRetreat.Add(0);
                 Warnings.Add(0);
 
-                listBox2.Items.Add(textBox1.Text);
+                listBox2.Items.Add(text);
                 listBox3.Items.Add("0" + "K / " + "0" + "D / " + "0" + "R / " + "0" + "M");
                 listBox4.Items.Add("0" + "K / " + "0" + "D / " + "0" + "R / " + "0" + "M");
                 listBox5.Items.Add("");
@@ -123,7 +124,7 @@ namespace WindowsFormsApp1
 
         private void KillButtonMinus_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1)
+            if (listBox1.SelectedIndex != -1 && playerKills[listBox1.SelectedIndex] > -99)
             {
                 playerKills[listBox1.SelectedIndex] -= 1;
                 CplayerKills[listBox1.SelectedIndex] -= 1;
@@ -134,7 +135,7 @@ namespace WindowsFormsApp1
 
         private void KillButtonPlus_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1)
+            if (listBox1.SelectedIndex != -1 && playerKills[listBox1.SelectedIndex] < 99)
             {
                 playerKills[listBox1.SelectedIndex] += 1;
                 CplayerKills[listBox1.SelectedIndex] += 1;
@@ -145,7 +146,7 @@ namespace WindowsFormsApp1
 
         private void RetreatButtonPlus_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1)
+            if (listBox1.SelectedIndex != -1 && playerRetreats[listBox1.SelectedIndex] < 99)
             {
                 playerRetreats[listBox1.SelectedIndex] += 1;
                 CplayerRetreats[listBox1.SelectedIndex] += 1;
@@ -156,7 +157,7 @@ namespace WindowsFormsApp1
 
         private void RetreatButtonMinus_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1)
+            if (listBox1.SelectedIndex != -1 && playerRetreats[listBox1.SelectedIndex] > -99)
             {
                 playerRetreats[listBox1.SelectedIndex] -= 1;
                 CplayerRetreats[listBox1.SelectedIndex] -= 1;
@@ -167,7 +168,7 @@ namespace WindowsFormsApp1
 
         private void DeathButtonPlus_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1)
+            if (listBox1.SelectedIndex != -1 && playerDeaths[listBox1.SelectedIndex] < 99)
             {
                 playerDeaths[listBox1.SelectedIndex] += 1;
                 CplayerDeaths[listBox1.SelectedIndex] += 1;
@@ -178,7 +179,7 @@ namespace WindowsFormsApp1
 
         private void DeathButtonMinus_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1)
+            if (listBox1.SelectedIndex != -1 && playerDeaths[listBox1.SelectedIndex] > -99)
             {
                 playerDeaths[listBox1.SelectedIndex] -= 1;
                 CplayerDeaths[listBox1.SelectedIndex] -= 1;
@@ -189,7 +190,7 @@ namespace WindowsFormsApp1
 
         private void MadeRetreatMinus_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1)
+            if (listBox1.SelectedIndex != -1 && playerMadeRetreat[listBox1.SelectedIndex] > -99)
             {
                 playerMadeRetreat[listBox1.SelectedIndex] -= 1;
                 CplayerMadeRetreat[listBox1.SelectedIndex] -= 1;
@@ -200,7 +201,7 @@ namespace WindowsFormsApp1
 
         private void MadeRetreatPlus_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1)
+            if (listBox1.SelectedIndex != -1 && playerMadeRetreat[listBox1.SelectedIndex] < 99)
             {
                 playerMadeRetreat[listBox1.SelectedIndex] += 1;
                 CplayerMadeRetreat[listBox1.SelectedIndex] += 1;
@@ -277,15 +278,20 @@ namespace WindowsFormsApp1
             }
 
         }
-
-        private void button4_Click(object sender, EventArgs e)
+    private void button4_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedIndex != -1 && Warnings[listBox1.SelectedIndex] != 3)
             {
                 string currentWarnings = listBox5.Items[listBox1.SelectedIndex].ToString() + " X";
                 listBox5.Items.RemoveAt(listBox1.SelectedIndex);
                 listBox5.Items.Insert(listBox1.SelectedIndex, currentWarnings);
+                string text = textBox2.Text;
+                if (textBox1.Text.Length > 100)
+                {
+                    text = textBox1.Text.Substring(0, 100);
+                }
                 listBox6.Items.Add(listBox1.Items[listBox1.SelectedIndex].ToString() + " - Warning - " + textBox2.Text);
+
                 Warnings[listBox1.SelectedIndex] = Warnings[listBox1.SelectedIndex] + 1;
                 UpdateList();
                 textBox2.Text = "";
@@ -295,7 +301,7 @@ namespace WindowsFormsApp1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (listBox5.Items[listBox1.SelectedIndex].ToString().Length != 0)
+            if (listBox1.SelectedIndex != -1 && listBox5.Items[listBox1.SelectedIndex].ToString().Length != 0)
             {
                 string currentWarnings = (listBox5.Items[listBox1.SelectedIndex].ToString().Substring(0, listBox5.Items[listBox1.SelectedIndex].ToString().Length - 2));
                 listBox5.Items.RemoveAt(listBox1.SelectedIndex);
@@ -309,6 +315,11 @@ namespace WindowsFormsApp1
 
         private void button7_Click(object sender, EventArgs e)
         {
+            string text = textBox2.Text;
+            if (textBox1.Text.Length > 100)
+            {
+                text = textBox1.Text.Substring(0, 100);
+            }
             listBox6.Items.Add("Note - " + textBox2.Text);
             textBox2.Text = "";
         }
