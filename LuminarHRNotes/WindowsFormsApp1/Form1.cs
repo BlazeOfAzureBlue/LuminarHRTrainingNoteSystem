@@ -100,6 +100,7 @@ namespace WindowsFormsApp1
                 RetreatsLabelCount.Text = "0";
                 MadeRetreatLabel.Text = "0";
                 listBox1.Update();
+                listBox1.SelectedIndex = -1;
             }
         }
 
@@ -115,6 +116,8 @@ namespace WindowsFormsApp1
                 listBox3.Items.Insert(i, CplayerKills[i] + "K / " + CplayerDeaths[i] + "D / " + CplayerRetreats[i] + "R / " + CplayerMadeRetreat[i] + "M");
 
             }
+
+            listBox1.SelectedIndex = -1;
             PlayerName.Text = "N/A";
             KillsLabelCount.Text = "0";
             DeathsLabelCount.Text = "0";
@@ -309,7 +312,6 @@ namespace WindowsFormsApp1
                 listBox6.Items.Add(listBox1.Items[listBox1.SelectedIndex].ToString() + " - Removed Warning");
                 Warnings[listBox1.SelectedIndex] = Warnings[listBox1.SelectedIndex] - 1;
                 UpdateList();
-                textBox2.Text = "";
             }
         }
 
