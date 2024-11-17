@@ -8,3 +8,13 @@ C:\Users\Brayd\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsF
 C:\Users\Brayd\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\Brayd\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Brayd\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Brayd\Downloads\LuminarHRTrainingNoteSystem\LuminarHRNotes\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Brayd\Downloads\LuminarHRTrainingNoteSystem\LuminarHRNotes\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Brayd\Downloads\LuminarHRTrainingNoteSystem\LuminarHRNotes\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Brayd\Downloads\LuminarHRTrainingNoteSystem\LuminarHRNotes\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Brayd\Downloads\LuminarHRTrainingNoteSystem\LuminarHRNotes\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Brayd\Downloads\LuminarHRTrainingNoteSystem\LuminarHRNotes\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Brayd\Downloads\LuminarHRTrainingNoteSystem\LuminarHRNotes\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Brayd\Downloads\LuminarHRTrainingNoteSystem\LuminarHRNotes\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Brayd\Downloads\LuminarHRTrainingNoteSystem\LuminarHRNotes\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Brayd\Downloads\LuminarHRTrainingNoteSystem\LuminarHRNotes\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

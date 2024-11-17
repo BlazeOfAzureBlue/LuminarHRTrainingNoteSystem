@@ -169,7 +169,7 @@
             this.button1.ForeColor = System.Drawing.Color.Silver;
             this.button1.Location = new System.Drawing.Point(12, 359);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 23);
+            this.button1.Size = new System.Drawing.Size(160, 23);
             this.button1.TabIndex = 7;
             this.button1.Text = "Remove Selected Player";
             this.button1.UseVisualStyleBackColor = false;
@@ -184,7 +184,7 @@
             this.button2.ForeColor = System.Drawing.Color.Silver;
             this.button2.Location = new System.Drawing.Point(12, 387);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(89, 23);
             this.button2.TabIndex = 8;
             this.button2.Text = "Add Player";
             this.button2.UseVisualStyleBackColor = false;
@@ -196,7 +196,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Corbel", 9F);
             this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(93, 388);
+            this.textBox1.Location = new System.Drawing.Point(107, 388);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(268, 19);
             this.textBox1.TabIndex = 9;
@@ -237,7 +237,7 @@
             this.button4.ForeColor = System.Drawing.Color.Silver;
             this.button4.Location = new System.Drawing.Point(412, 188);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(169, 23);
+            this.button4.Size = new System.Drawing.Size(191, 23);
             this.button4.TabIndex = 12;
             this.button4.Text = "Enter Warning for Selected";
             this.button4.UseVisualStyleBackColor = false;
@@ -250,9 +250,9 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Silver;
-            this.button6.Location = new System.Drawing.Point(614, 188);
+            this.button6.Location = new System.Drawing.Point(609, 188);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(188, 23);
+            this.button6.Size = new System.Drawing.Size(201, 23);
             this.button6.TabIndex = 14;
             this.button6.Text = "Remove Warning for Selected";
             this.button6.UseVisualStyleBackColor = false;
@@ -267,7 +267,7 @@
             this.button7.ForeColor = System.Drawing.Color.Silver;
             this.button7.Location = new System.Drawing.Point(535, 217);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(125, 23);
+            this.button7.Size = new System.Drawing.Size(139, 23);
             this.button7.TabIndex = 15;
             this.button7.Text = "Add Personal Note";
             this.button7.UseVisualStyleBackColor = false;
