@@ -274,7 +274,7 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1)
+            if (listBox1.SelectedIndex != -1 && Warnings[listBox1.SelectedIndex] != 3)
             {
                 string currentWarnings = listBox5.Items[listBox1.SelectedIndex].ToString() + " X";
                 listBox5.Items.RemoveAt(listBox1.SelectedIndex);

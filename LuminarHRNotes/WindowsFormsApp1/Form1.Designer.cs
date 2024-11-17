@@ -105,6 +105,7 @@
             this.listBox2.ItemHeight = 18;
             this.listBox2.Location = new System.Drawing.Point(839, 188);
             this.listBox2.Name = "listBox2";
+            this.listBox2.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox2.Size = new System.Drawing.Size(247, 252);
             this.listBox2.TabIndex = 2;
             // 
@@ -118,6 +119,7 @@
             this.listBox3.ItemHeight = 18;
             this.listBox3.Location = new System.Drawing.Point(1092, 188);
             this.listBox3.Name = "listBox3";
+            this.listBox3.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox3.Size = new System.Drawing.Size(173, 252);
             this.listBox3.TabIndex = 3;
             // 
@@ -131,6 +133,7 @@
             this.listBox4.ItemHeight = 18;
             this.listBox4.Location = new System.Drawing.Point(1271, 188);
             this.listBox4.Name = "listBox4";
+            this.listBox4.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox4.Size = new System.Drawing.Size(173, 252);
             this.listBox4.TabIndex = 4;
             // 
@@ -144,6 +147,7 @@
             this.listBox5.ItemHeight = 18;
             this.listBox5.Location = new System.Drawing.Point(285, 93);
             this.listBox5.Name = "listBox5";
+            this.listBox5.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox5.Size = new System.Drawing.Size(76, 252);
             this.listBox5.TabIndex = 5;
             // 
@@ -155,9 +159,9 @@
             this.listBox6.ForeColor = System.Drawing.Color.Silver;
             this.listBox6.FormattingEnabled = true;
             this.listBox6.ItemHeight = 18;
-            this.listBox6.Location = new System.Drawing.Point(845, 514);
+            this.listBox6.Location = new System.Drawing.Point(527, 589);
             this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(605, 234);
+            this.listBox6.Size = new System.Drawing.Size(959, 234);
             this.listBox6.TabIndex = 6;
             // 
             // button1
@@ -411,7 +415,7 @@
             this.KillButtonPlus.FlatAppearance.BorderSize = 0;
             this.KillButtonPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.KillButtonPlus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KillButtonPlus.Location = new System.Drawing.Point(19, 569);
+            this.KillButtonPlus.Location = new System.Drawing.Point(95, 573);
             this.KillButtonPlus.Name = "KillButtonPlus";
             this.KillButtonPlus.Size = new System.Drawing.Size(29, 29);
             this.KillButtonPlus.TabIndex = 27;
@@ -425,7 +429,7 @@
             this.KillButtonMinus.FlatAppearance.BorderSize = 0;
             this.KillButtonMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.KillButtonMinus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KillButtonMinus.Location = new System.Drawing.Point(95, 571);
+            this.KillButtonMinus.Location = new System.Drawing.Point(19, 571);
             this.KillButtonMinus.Name = "KillButtonMinus";
             this.KillButtonMinus.Size = new System.Drawing.Size(29, 29);
             this.KillButtonMinus.TabIndex = 28;
@@ -439,7 +443,7 @@
             this.RetreatButtonPlus.FlatAppearance.BorderSize = 0;
             this.RetreatButtonPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RetreatButtonPlus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RetreatButtonPlus.Location = new System.Drawing.Point(18, 643);
+            this.RetreatButtonPlus.Location = new System.Drawing.Point(95, 645);
             this.RetreatButtonPlus.Name = "RetreatButtonPlus";
             this.RetreatButtonPlus.Size = new System.Drawing.Size(29, 29);
             this.RetreatButtonPlus.TabIndex = 29;
@@ -453,7 +457,7 @@
             this.RetreatButtonMinus.FlatAppearance.BorderSize = 0;
             this.RetreatButtonMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RetreatButtonMinus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RetreatButtonMinus.Location = new System.Drawing.Point(93, 643);
+            this.RetreatButtonMinus.Location = new System.Drawing.Point(19, 643);
             this.RetreatButtonMinus.Name = "RetreatButtonMinus";
             this.RetreatButtonMinus.Size = new System.Drawing.Size(29, 29);
             this.RetreatButtonMinus.TabIndex = 30;
@@ -467,7 +471,7 @@
             this.DeathButtonPlus.FlatAppearance.BorderSize = 0;
             this.DeathButtonPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeathButtonPlus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeathButtonPlus.Location = new System.Drawing.Point(18, 719);
+            this.DeathButtonPlus.Location = new System.Drawing.Point(95, 714);
             this.DeathButtonPlus.Name = "DeathButtonPlus";
             this.DeathButtonPlus.Size = new System.Drawing.Size(29, 29);
             this.DeathButtonPlus.TabIndex = 31;
@@ -481,7 +485,7 @@
             this.DeathButtonMinus.FlatAppearance.BorderSize = 0;
             this.DeathButtonMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeathButtonMinus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeathButtonMinus.Location = new System.Drawing.Point(93, 719);
+            this.DeathButtonMinus.Location = new System.Drawing.Point(19, 714);
             this.DeathButtonMinus.Name = "DeathButtonMinus";
             this.DeathButtonMinus.Size = new System.Drawing.Size(29, 29);
             this.DeathButtonMinus.TabIndex = 32;
@@ -495,7 +499,7 @@
             this.MadeRetreatPlus.FlatAppearance.BorderSize = 0;
             this.MadeRetreatPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MadeRetreatPlus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MadeRetreatPlus.Location = new System.Drawing.Point(19, 793);
+            this.MadeRetreatPlus.Location = new System.Drawing.Point(95, 793);
             this.MadeRetreatPlus.Name = "MadeRetreatPlus";
             this.MadeRetreatPlus.Size = new System.Drawing.Size(29, 29);
             this.MadeRetreatPlus.TabIndex = 33;
@@ -509,7 +513,7 @@
             this.MadeRetreatMinus.FlatAppearance.BorderSize = 0;
             this.MadeRetreatMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MadeRetreatMinus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MadeRetreatMinus.Location = new System.Drawing.Point(93, 793);
+            this.MadeRetreatMinus.Location = new System.Drawing.Point(19, 793);
             this.MadeRetreatMinus.Name = "MadeRetreatMinus";
             this.MadeRetreatMinus.Size = new System.Drawing.Size(29, 29);
             this.MadeRetreatMinus.TabIndex = 34;
