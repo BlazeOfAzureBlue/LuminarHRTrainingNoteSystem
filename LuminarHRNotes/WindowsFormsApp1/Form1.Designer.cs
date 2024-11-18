@@ -30,10 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
             this.listBox6 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -62,11 +58,11 @@
             this.DeathButtonMinus = new System.Windows.Forms.Button();
             this.MadeRetreatPlus = new System.Windows.Forms.Button();
             this.MadeRetreatMinus = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.Names = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.two = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.one = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -85,95 +81,40 @@
             // 
             this.listBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Font = new System.Drawing.Font("Corbel", 9F);
+            this.listBox1.Font = new System.Drawing.Font("Corbel", 13F);
             this.listBox1.ForeColor = System.Drawing.Color.Silver;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 18;
+            this.listBox1.ItemHeight = 27;
             this.listBox1.Location = new System.Drawing.Point(32, 93);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(247, 252);
+            this.listBox1.Size = new System.Drawing.Size(288, 243);
             this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox2.Font = new System.Drawing.Font("Corbel", 9F);
-            this.listBox2.ForeColor = System.Drawing.Color.Silver;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 18;
-            this.listBox2.Location = new System.Drawing.Point(839, 188);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox2.Size = new System.Drawing.Size(247, 252);
-            this.listBox2.TabIndex = 2;
-            // 
-            // listBox3
-            // 
-            this.listBox3.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox3.Font = new System.Drawing.Font("Corbel", 9F);
-            this.listBox3.ForeColor = System.Drawing.Color.Silver;
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 18;
-            this.listBox3.Location = new System.Drawing.Point(1092, 188);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox3.Size = new System.Drawing.Size(173, 252);
-            this.listBox3.TabIndex = 3;
-            // 
-            // listBox4
-            // 
-            this.listBox4.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox4.Font = new System.Drawing.Font("Corbel", 9F);
-            this.listBox4.ForeColor = System.Drawing.Color.Silver;
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 18;
-            this.listBox4.Location = new System.Drawing.Point(1271, 188);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox4.Size = new System.Drawing.Size(173, 252);
-            this.listBox4.TabIndex = 4;
-            // 
-            // listBox5
-            // 
-            this.listBox5.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.listBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox5.Font = new System.Drawing.Font("Corbel", 9F);
-            this.listBox5.ForeColor = System.Drawing.Color.Maroon;
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 18;
-            this.listBox5.Location = new System.Drawing.Point(285, 93);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox5.Size = new System.Drawing.Size(76, 252);
-            this.listBox5.TabIndex = 5;
             // 
             // listBox6
             // 
             this.listBox6.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.listBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox6.Font = new System.Drawing.Font("Corbel", 9F);
+            this.listBox6.Font = new System.Drawing.Font("Corbel", 12F);
             this.listBox6.ForeColor = System.Drawing.Color.Silver;
             this.listBox6.FormattingEnabled = true;
-            this.listBox6.ItemHeight = 18;
-            this.listBox6.Location = new System.Drawing.Point(527, 589);
+            this.listBox6.ItemHeight = 24;
+            this.listBox6.Location = new System.Drawing.Point(664, 563);
             this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(959, 234);
+            this.listBox6.Size = new System.Drawing.Size(959, 216);
             this.listBox6.TabIndex = 6;
+            this.listBox6.SelectedIndexChanged += new System.EventHandler(this.listBox6_SelectedIndexChanged);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Corbel", 10F);
             this.button1.ForeColor = System.Drawing.Color.Silver;
-            this.button1.Location = new System.Drawing.Point(12, 359);
+            this.button1.Location = new System.Drawing.Point(32, 342);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 23);
+            this.button1.Size = new System.Drawing.Size(199, 29);
             this.button1.TabIndex = 7;
             this.button1.Text = "Remove Selected Player";
             this.button1.UseVisualStyleBackColor = false;
@@ -184,11 +125,11 @@
             this.button2.BackColor = System.Drawing.Color.SteelBlue;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Corbel", 10F);
             this.button2.ForeColor = System.Drawing.Color.Silver;
-            this.button2.Location = new System.Drawing.Point(12, 387);
+            this.button2.Location = new System.Drawing.Point(12, 383);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 23);
+            this.button2.Size = new System.Drawing.Size(116, 27);
             this.button2.TabIndex = 8;
             this.button2.Text = "Add Player";
             this.button2.UseVisualStyleBackColor = false;
@@ -198,11 +139,11 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Corbel", 9F);
+            this.textBox1.Font = new System.Drawing.Font("Corbel", 12F);
             this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(107, 388);
+            this.textBox1.Location = new System.Drawing.Point(134, 383);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(268, 19);
+            this.textBox1.Size = new System.Drawing.Size(268, 25);
             this.textBox1.TabIndex = 9;
             // 
             // textBox2
@@ -211,10 +152,10 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Corbel", 9F);
             this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(426, 103);
+            this.textBox2.Location = new System.Drawing.Point(366, 95);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(362, 79);
+            this.textBox2.Size = new System.Drawing.Size(393, 79);
             this.textBox2.TabIndex = 10;
             // 
             // button3
@@ -222,11 +163,11 @@
             this.button3.BackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Corbel", 11F);
             this.button3.ForeColor = System.Drawing.Color.Silver;
-            this.button3.Location = new System.Drawing.Point(1101, 454);
+            this.button3.Location = new System.Drawing.Point(1170, 342);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 23);
+            this.button3.Size = new System.Drawing.Size(199, 37);
             this.button3.TabIndex = 11;
             this.button3.Text = "Reset Current Round";
             this.button3.UseVisualStyleBackColor = false;
@@ -237,11 +178,11 @@
             this.button4.BackColor = System.Drawing.Color.SteelBlue;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Corbel", 9F);
             this.button4.ForeColor = System.Drawing.Color.Silver;
-            this.button4.Location = new System.Drawing.Point(412, 188);
+            this.button4.Location = new System.Drawing.Point(345, 180);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(191, 23);
+            this.button4.Size = new System.Drawing.Size(205, 34);
             this.button4.TabIndex = 12;
             this.button4.Text = "Enter Warning for Selected";
             this.button4.UseVisualStyleBackColor = false;
@@ -252,11 +193,11 @@
             this.button6.BackColor = System.Drawing.Color.SteelBlue;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Corbel", 9F);
             this.button6.ForeColor = System.Drawing.Color.Silver;
-            this.button6.Location = new System.Drawing.Point(609, 188);
+            this.button6.Location = new System.Drawing.Point(556, 180);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(201, 23);
+            this.button6.Size = new System.Drawing.Size(225, 34);
             this.button6.TabIndex = 14;
             this.button6.Text = "Remove Warning for Selected";
             this.button6.UseVisualStyleBackColor = false;
@@ -267,11 +208,11 @@
             this.button7.BackColor = System.Drawing.Color.SteelBlue;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Corbel", 11F);
             this.button7.ForeColor = System.Drawing.Color.Silver;
-            this.button7.Location = new System.Drawing.Point(535, 217);
+            this.button7.Location = new System.Drawing.Point(452, 220);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(139, 23);
+            this.button7.Size = new System.Drawing.Size(174, 34);
             this.button7.TabIndex = 15;
             this.button7.Text = "Add Personal Note";
             this.button7.UseVisualStyleBackColor = false;
@@ -411,10 +352,11 @@
             // 
             // KillButtonPlus
             // 
-            this.KillButtonPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.KillButtonPlus.BackColor = System.Drawing.Color.Green;
             this.KillButtonPlus.FlatAppearance.BorderSize = 0;
             this.KillButtonPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.KillButtonPlus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KillButtonPlus.Font = new System.Drawing.Font("Corbel", 12F);
+            this.KillButtonPlus.ForeColor = System.Drawing.Color.Silver;
             this.KillButtonPlus.Location = new System.Drawing.Point(95, 573);
             this.KillButtonPlus.Name = "KillButtonPlus";
             this.KillButtonPlus.Size = new System.Drawing.Size(29, 29);
@@ -425,24 +367,27 @@
             // 
             // KillButtonMinus
             // 
-            this.KillButtonMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.KillButtonMinus.BackColor = System.Drawing.Color.Maroon;
             this.KillButtonMinus.FlatAppearance.BorderSize = 0;
             this.KillButtonMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.KillButtonMinus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KillButtonMinus.Location = new System.Drawing.Point(19, 571);
+            this.KillButtonMinus.Font = new System.Drawing.Font("Corbel", 12F);
+            this.KillButtonMinus.ForeColor = System.Drawing.Color.Silver;
+            this.KillButtonMinus.Location = new System.Drawing.Point(18, 569);
             this.KillButtonMinus.Name = "KillButtonMinus";
             this.KillButtonMinus.Size = new System.Drawing.Size(29, 29);
             this.KillButtonMinus.TabIndex = 28;
             this.KillButtonMinus.Text = "-";
+            this.KillButtonMinus.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.KillButtonMinus.UseVisualStyleBackColor = false;
             this.KillButtonMinus.Click += new System.EventHandler(this.KillButtonMinus_Click);
             // 
             // RetreatButtonPlus
             // 
-            this.RetreatButtonPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.RetreatButtonPlus.BackColor = System.Drawing.Color.Green;
             this.RetreatButtonPlus.FlatAppearance.BorderSize = 0;
             this.RetreatButtonPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RetreatButtonPlus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RetreatButtonPlus.Font = new System.Drawing.Font("Corbel", 12F);
+            this.RetreatButtonPlus.ForeColor = System.Drawing.Color.Silver;
             this.RetreatButtonPlus.Location = new System.Drawing.Point(95, 645);
             this.RetreatButtonPlus.Name = "RetreatButtonPlus";
             this.RetreatButtonPlus.Size = new System.Drawing.Size(29, 29);
@@ -453,10 +398,11 @@
             // 
             // RetreatButtonMinus
             // 
-            this.RetreatButtonMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.RetreatButtonMinus.BackColor = System.Drawing.Color.Maroon;
             this.RetreatButtonMinus.FlatAppearance.BorderSize = 0;
             this.RetreatButtonMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RetreatButtonMinus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RetreatButtonMinus.Font = new System.Drawing.Font("Corbel", 12F);
+            this.RetreatButtonMinus.ForeColor = System.Drawing.Color.Silver;
             this.RetreatButtonMinus.Location = new System.Drawing.Point(19, 643);
             this.RetreatButtonMinus.Name = "RetreatButtonMinus";
             this.RetreatButtonMinus.Size = new System.Drawing.Size(29, 29);
@@ -467,10 +413,11 @@
             // 
             // DeathButtonPlus
             // 
-            this.DeathButtonPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DeathButtonPlus.BackColor = System.Drawing.Color.Green;
             this.DeathButtonPlus.FlatAppearance.BorderSize = 0;
             this.DeathButtonPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeathButtonPlus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeathButtonPlus.Font = new System.Drawing.Font("Corbel", 12F);
+            this.DeathButtonPlus.ForeColor = System.Drawing.Color.Silver;
             this.DeathButtonPlus.Location = new System.Drawing.Point(95, 714);
             this.DeathButtonPlus.Name = "DeathButtonPlus";
             this.DeathButtonPlus.Size = new System.Drawing.Size(29, 29);
@@ -481,10 +428,11 @@
             // 
             // DeathButtonMinus
             // 
-            this.DeathButtonMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DeathButtonMinus.BackColor = System.Drawing.Color.Maroon;
             this.DeathButtonMinus.FlatAppearance.BorderSize = 0;
             this.DeathButtonMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeathButtonMinus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeathButtonMinus.Font = new System.Drawing.Font("Corbel", 12F);
+            this.DeathButtonMinus.ForeColor = System.Drawing.Color.Silver;
             this.DeathButtonMinus.Location = new System.Drawing.Point(19, 714);
             this.DeathButtonMinus.Name = "DeathButtonMinus";
             this.DeathButtonMinus.Size = new System.Drawing.Size(29, 29);
@@ -495,10 +443,11 @@
             // 
             // MadeRetreatPlus
             // 
-            this.MadeRetreatPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MadeRetreatPlus.BackColor = System.Drawing.Color.Green;
             this.MadeRetreatPlus.FlatAppearance.BorderSize = 0;
             this.MadeRetreatPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MadeRetreatPlus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MadeRetreatPlus.Font = new System.Drawing.Font("Corbel", 12F);
+            this.MadeRetreatPlus.ForeColor = System.Drawing.Color.Silver;
             this.MadeRetreatPlus.Location = new System.Drawing.Point(95, 793);
             this.MadeRetreatPlus.Name = "MadeRetreatPlus";
             this.MadeRetreatPlus.Size = new System.Drawing.Size(29, 29);
@@ -509,10 +458,11 @@
             // 
             // MadeRetreatMinus
             // 
-            this.MadeRetreatMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MadeRetreatMinus.BackColor = System.Drawing.Color.Maroon;
             this.MadeRetreatMinus.FlatAppearance.BorderSize = 0;
             this.MadeRetreatMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MadeRetreatMinus.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MadeRetreatMinus.Font = new System.Drawing.Font("Corbel", 12F);
+            this.MadeRetreatMinus.ForeColor = System.Drawing.Color.Silver;
             this.MadeRetreatMinus.Location = new System.Drawing.Point(19, 793);
             this.MadeRetreatMinus.Name = "MadeRetreatMinus";
             this.MadeRetreatMinus.Size = new System.Drawing.Size(29, 29);
@@ -521,77 +471,51 @@
             this.MadeRetreatMinus.UseVisualStyleBackColor = false;
             this.MadeRetreatMinus.Click += new System.EventHandler(this.MadeRetreatMinus_Click);
             // 
-            // label4
+            // listView1
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Corbel", 20F);
-            this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(907, 141);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 41);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Names";
+            this.listView1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Names,
+            this.two,
+            this.one,
+            this.columnHeader1});
+            this.listView1.Font = new System.Drawing.Font("Corbel", 10F);
+            this.listView1.ForeColor = System.Drawing.Color.Silver;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(801, 93);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(772, 241);
+            this.listView1.TabIndex = 40;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // label6
+            // Names
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Corbel", 20F);
-            this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(1107, 141);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 41);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "K/D/R/M";
+            this.Names.Text = "Player Names";
+            this.Names.Width = 150;
             // 
-            // label8
+            // two
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Corbel", 20F);
-            this.label8.ForeColor = System.Drawing.Color.Silver;
-            this.label8.Location = new System.Drawing.Point(1290, 141);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 41);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "K/D/R/M";
+            this.two.Text = "Round K/D/R/M";
+            this.two.Width = 150;
             // 
-            // label10
+            // one
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Corbel", 20F);
-            this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(1107, 103);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(125, 41);
-            this.label10.TabIndex = 38;
-            this.label10.Text = "Current";
+            this.one.Text = "Total K/D/R/M";
+            this.one.Width = 150;
             // 
-            // label12
+            // columnHeader1
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Corbel", 20F);
-            this.label12.ForeColor = System.Drawing.Color.Silver;
-            this.label12.Location = new System.Drawing.Point(1290, 103);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 41);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "Total";
+            this.columnHeader1.Text = "Warnings";
+            this.columnHeader1.Width = 80;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(1498, 832);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(1658, 1055);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.MadeRetreatMinus);
             this.Controls.Add(this.MadeRetreatPlus);
             this.Controls.Add(this.DeathButtonMinus);
@@ -620,14 +544,12 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox6);
-            this.Controls.Add(this.listBox5);
-            this.Controls.Add(this.listBox4);
-            this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -638,10 +560,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.ListBox listBox6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -670,11 +588,11 @@
         private System.Windows.Forms.Button DeathButtonMinus;
         private System.Windows.Forms.Button MadeRetreatPlus;
         private System.Windows.Forms.Button MadeRetreatMinus;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Names;
+        private System.Windows.Forms.ColumnHeader two;
+        private System.Windows.Forms.ColumnHeader one;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
 

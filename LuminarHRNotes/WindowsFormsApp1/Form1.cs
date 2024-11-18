@@ -1,13 +1,16 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WindowsFormsApp1
 {
@@ -23,8 +26,10 @@ namespace WindowsFormsApp1
         List<int> playerMadeRetreat = new List<int>();
         List<int> CplayerMadeRetreat = new List<int>();
         List<int> Warnings = new List<int>();
+        List<string> WarningsString = new List<string>();
         List<int> Rankings = new List<int>();
-
+        bool active = true;
+        int scrollValue = 0;
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +37,19 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private IEnumerator valueCheck()
+        {
+            if (listBox1.TopIndex != scrollValue)
+            {
+                listBox1.TopIndex = scrollValue;
+                Console.WriteLine("Aaaa");
+            }
+            Thread.Sleep(100);
+            valueCheck();
+            return null;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -56,11 +73,14 @@ namespace WindowsFormsApp1
                 CplayerRetreats.Add(0);
                 CplayerMadeRetreat.Add(0);
                 Warnings.Add(0);
+                WarningsString.Add("");
 
-                listBox2.Items.Add(text);
-                listBox3.Items.Add("0" + "K / " + "0" + "D / " + "0" + "R / " + "0" + "M");
-                listBox4.Items.Add("0" + "K / " + "0" + "D / " + "0" + "R / " + "0" + "M");
-                listBox5.Items.Add("");
+                ListViewItem item = new ListViewItem();
+                item.Text = text;
+                item.SubItems.Add("0" + "K / " + "0" + "D / " + "0" + "R / " + "0" + "M");
+                item.SubItems.Add("0" + "K / " + "0" + "D / " + "0" + "R / " + "0" + "M");
+                item.SubItems.Add("");
+                listView1.Items.Add(item);
                 textBox1.Text = "";
             }
         }
@@ -77,30 +97,41 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void listBox1_Change(object sender, EventArgs e)
+        {
+            PlayerName.Text = "Changed";
+        }
+
+        
         private void button1_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedIndex != -1)
             {
-                int itemSelected = listBox1.SelectedIndex;
-                listBox1.Items.RemoveAt(itemSelected);
-                listBox2.Items.RemoveAt(itemSelected);
-                listBox3.Items.RemoveAt(itemSelected);
-                listBox4.Items.RemoveAt(itemSelected);
-                listBox5.Items.RemoveAt(itemSelected);
-                playerNames.RemoveAt(itemSelected);
-                playerKills.RemoveAt(itemSelected);
-                CplayerDeaths.RemoveAt(itemSelected);
-                playerDeaths.RemoveAt(itemSelected);
-                playerMadeRetreat.RemoveAt(itemSelected);
-                CplayerMadeRetreat.RemoveAt(itemSelected);
-                Warnings.RemoveAt(itemSelected);
-                PlayerName.Text = "N/A";
-                KillsLabelCount.Text = "0";
-                DeathsLabelCount.Text = "0";
-                RetreatsLabelCount.Text = "0";
-                MadeRetreatLabel.Text = "0";
-                listBox1.Update();
-                listBox1.SelectedIndex = -1;
+                for(int i = 0; i < playerNames.Count; i++)
+                {
+                    if (playerNames[listBox1.SelectedIndex] == listView1.Items[i].Text)
+                    {
+                        listView1.Items.RemoveAt(i);
+                        playerNames.RemoveAt(listBox1.SelectedIndex);
+                        playerKills.RemoveAt(listBox1.SelectedIndex);
+                        CplayerDeaths.RemoveAt(listBox1.SelectedIndex);
+                        playerDeaths.RemoveAt(listBox1.SelectedIndex);
+                        playerMadeRetreat.RemoveAt(listBox1.SelectedIndex);
+                        CplayerMadeRetreat.RemoveAt(listBox1.SelectedIndex);
+                        Warnings.RemoveAt(listBox1.SelectedIndex);
+                        WarningsString.RemoveAt(listBox1.SelectedIndex);
+                        listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+                        PlayerName.Text = "N/A";
+                        KillsLabelCount.Text = "0";
+                        DeathsLabelCount.Text = "0";
+                        RetreatsLabelCount.Text = "0";
+                        MadeRetreatLabel.Text = "0";
+                        listBox1.Update();
+                        listBox1.SelectedIndex = -1;
+                        break;
+
+                    }
+                }
             }
         }
 
@@ -112,8 +143,7 @@ namespace WindowsFormsApp1
                 CplayerDeaths[i] = 0;
                 CplayerRetreats[i] = 0;
                 CplayerMadeRetreat[i] = 0;
-                listBox3.Items.RemoveAt(i);
-                listBox3.Items.Insert(i, CplayerKills[i] + "K / " + CplayerDeaths[i] + "D / " + CplayerRetreats[i] + "R / " + CplayerMadeRetreat[i] + "M");
+                UpdateList();
 
             }
 
@@ -127,7 +157,7 @@ namespace WindowsFormsApp1
 
         private void KillButtonMinus_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1 && playerKills[listBox1.SelectedIndex] > -99)
+            if (listBox1.SelectedIndex != -1 && CplayerKills[listBox1.SelectedIndex] > -99)
             {
                 playerKills[listBox1.SelectedIndex] -= 1;
                 CplayerKills[listBox1.SelectedIndex] -= 1;
@@ -228,9 +258,7 @@ namespace WindowsFormsApp1
 
                 Rankings.Add(playerScore);
             }
-            listBox2.Items.Clear();
-            listBox3.Items.Clear();
-            listBox4.Items.Clear();
+            listView1.Items.Clear();
 
             for (int i = 0; i < playerNames.Count; i++)
             {
@@ -272,9 +300,12 @@ namespace WindowsFormsApp1
                     }
                     if (j == Rankings.Count - 1)
                     {
-                        listBox2.Items.Add(playerNames[CurrentPositioning]);
-                        listBox3.Items.Add(CplayerKills[CurrentPositioning] + "K / " + CplayerDeaths[CurrentPositioning] + "D / " + CplayerRetreats[CurrentPositioning] + "R / " + CplayerMadeRetreat[CurrentPositioning] + "M");
-                        listBox4.Items.Add(playerKills[CurrentPositioning] + "K / " + playerDeaths[CurrentPositioning] + "D / " + playerRetreats[CurrentPositioning] + "R / " + playerMadeRetreat[CurrentPositioning] + "M");
+                        ListViewItem item = new ListViewItem();
+                        item.Text = playerNames[CurrentPositioning];
+                        item.SubItems.Add(CplayerKills[CurrentPositioning] + "K / " + CplayerDeaths[CurrentPositioning] + "D / " + CplayerRetreats[CurrentPositioning] + "R / " + CplayerMadeRetreat[CurrentPositioning] + "M");
+                        item.SubItems.Add(playerKills[CurrentPositioning] + "K / " + playerDeaths[CurrentPositioning] + "D / " + playerRetreats[CurrentPositioning] + "R / " + playerMadeRetreat[CurrentPositioning] + "M");
+                        item.SubItems.Add(WarningsString[CurrentPositioning]);
+                        listView1.Items.Add(item);
                         Rankings[CurrentPositioning] = -9999;
                     }
                 }
@@ -285,9 +316,6 @@ namespace WindowsFormsApp1
         {
             if (listBox1.SelectedIndex != -1 && Warnings[listBox1.SelectedIndex] != 3)
             {
-                string currentWarnings = listBox5.Items[listBox1.SelectedIndex].ToString() + " X";
-                listBox5.Items.RemoveAt(listBox1.SelectedIndex);
-                listBox5.Items.Insert(listBox1.SelectedIndex, currentWarnings);
                 string text = textBox2.Text;
                 if (textBox1.Text.Length > 100)
                 {
@@ -296,6 +324,7 @@ namespace WindowsFormsApp1
                 listBox6.Items.Add(listBox1.Items[listBox1.SelectedIndex].ToString() + " - Warning - " + textBox2.Text);
 
                 Warnings[listBox1.SelectedIndex] = Warnings[listBox1.SelectedIndex] + 1;
+                WarningsString[listBox1.SelectedIndex] = WarningsString[listBox1.SelectedIndex] + " X";
                 UpdateList();
                 textBox2.Text = "";
 
@@ -304,11 +333,9 @@ namespace WindowsFormsApp1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex != -1 && listBox5.Items[listBox1.SelectedIndex].ToString().Length != 0)
+            if (listBox1.SelectedIndex != -1 && Warnings[listBox1.SelectedIndex] != 0)
             {
-                string currentWarnings = (listBox5.Items[listBox1.SelectedIndex].ToString().Substring(0, listBox5.Items[listBox1.SelectedIndex].ToString().Length - 2));
-                listBox5.Items.RemoveAt(listBox1.SelectedIndex);
-                listBox5.Items.Insert(listBox1.SelectedIndex, currentWarnings);
+                WarningsString[listBox1.SelectedIndex] = WarningsString[listBox1.SelectedIndex].Substring(0, WarningsString[listBox1.SelectedIndex].ToString().Length - 2);
                 listBox6.Items.Add(listBox1.Items[listBox1.SelectedIndex].ToString() + " - Removed Warning");
                 Warnings[listBox1.SelectedIndex] = Warnings[listBox1.SelectedIndex] - 1;
                 UpdateList();
@@ -324,6 +351,11 @@ namespace WindowsFormsApp1
             }
             listBox6.Items.Add("Note - " + textBox2.Text);
             textBox2.Text = "";
+        }
+
+        private void listBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
