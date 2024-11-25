@@ -4,6 +4,8 @@ This note system has been designed to just improve the overall hosting experienc
 
 Thank you to Koleb for advice on creating it and Kap for breaking it.
 
+# If you have any issues, please contact me at requiemforthehunter on discord / Kitsune in The Luminars server.
+
 ## Most recent download link
 
 https://github.com/BlazeOfAzureBlue/LuminarHRTrainingNoteSystem/releases/tag/V2.5
